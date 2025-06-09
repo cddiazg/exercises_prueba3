@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(30, 75, 179);
+    padding: 15px 40px 0px 80px;
+    border-bottom: 4px solid orangered;
+}
+
+.header-logo img {
+    width: 230px;
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transform: translateY(-20px);
+    flex-grow: 1;
+    margin-top: 0;  
+    padding: 0px 30px 10px 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.nav-item {
+    color: aliceblue;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.hiperofertas {
+    background-color: #99b3e4;
+    color: rgb(17, 17, 116);
+    border-radius: 0 0 10px 10px;
+    padding: 15px;
+    margin-top: 0;
+}
+
+.hiperofertas img {
+    width: 18px;
+    margin-right: 5px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    justify-content: flex-end;    
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 47%;
+    height: 40px;
+    transform: translateX(-170px);
+}
+
+.search-container img {
+    height: 12px;
+    margin: 0 12px;
+}
+
+#buscador {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-container:focus-within {
+    transform: scale(1.02);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.user-cart-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-cart-icons  .icon-group img {
+    width: 30px;
+}
+
+.icon-group {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 5px; 
+  transform: translateX(-40px);
+}
+
+.icon-group p {
+    font-size: 15px;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+.separator {
+    width: 1px; 
+    height: 40px; 
+    background-color: aliceblue; 
+    margin: 0 5px;    
+    transform: translateX(-40px);
+
+}  
+
+.nav-links2 {
+    display: flex;
+    list-style: none;
+    padding:5px 5px 5px 5px ;
+    border: 1px solid #ccc; 
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5); 
+}
+
+.nav-item2 {
+    color: rgb(37, 103, 209);
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.separator2 {
+    width: 0.5px; 
+    height: 8px; 
+    background-color: rgb(0, 0, 0); 
+    margin:10px -5px 9px 10px;    
+}  
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown img {
+    width: 10px;
+    margin: 10px 10px 10px 30px;
+}    
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    nav-down: 100%; 
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    min-width: 100px; 
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    color: rgb(17, 17, 116);
+}
+
+.dropdown-content a:hover {
+    background: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.slide-content img {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 40px 0px 0px 40px;
+    border-radius: 5px  ;
+}
+
+.carousel-navigation {
+    display: flex;
+    gap: 350px;
+    margin: 10px;
+    top: 0;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 5px;
+    margin-left: 40px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #ff7e00; 
+}
+
+.carousel-arrows {
+    display: flex;
+    gap: 10px;
+}
+
+.prev-arrow,
+.next-arrow {
+    background-color: #4a64c4;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prev-arrow:hover,
+.next-arrow:hover {
+    background-color: #1c157d;
+    color: white;
+}
+
+
+
+.category-grid-container {
+    display: grid;
+    /* Definimos las columnas: 6 columnas de ancho igual y automático */
+    grid-template-columns: repeat(6, 1fr);
+    /* Espacio entre las filas y las columnas */
+    gap: 15px; /* Espacio entre las tarjetas */
+    max-width: 1200px; /* Ajusta esto según el ancho deseado para la cuadrícula */
+    background-color: #fff; /* Fondo blanco para el contenedor de la cuadrícula */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Sombra suave */
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column; /* Coloca la imagen encima del texto */
+    align-items: center; /* Centra horizontalmente el contenido */
+    justify-content: center; /* Centra verticalmente el contenido */
+    text-align: center;
+    padding: 15px 10px; /* Espaciado interno de cada tarjeta */
+    background-color: #fff; /* Fondo blanco de cada tarjeta */
+    border-radius: 8px;
+    border: 1px solid #f0f0f0; /* Borde muy sutil para cada tarjeta */
+    cursor: pointer;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: #333; /* Color del texto */
+    font-size: 0.9em; /* Tamaño de fuente del texto de la categoría */
+    transition: all 0.2s ease-in-out; /* Transición suave para efectos hover */
+    height: 120px; /* Altura fija para cada tarjeta */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+}
+
+.category-item:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra al pasar el mouse */
+    transform: translateY(-3px); /* Ligero levantamiento */
+    border-color: #e0e0e0; /* Borde un poco más visible */
+}
+
+.category-item img {
+    max-width: 60px; /* Tamaño máximo para las imágenes/iconos */
+    height: auto;
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
+}
+
+.category-item span {
+    font-weight: 600; /* Hace el texto un poco más audaz */
+}
+
+/* --- Estilos específicos para la tarjeta "Hiperofertas" --- */
+.category-item.special-offer {
+    background-color: #fff; /* Fondo blanco */
+    border-color: #ff5722; /* Borde naranja fuerte */
+    box-shadow: 0 0 0 2px #ff5722; /* Sombra adicional para el borde */
+    position: relative; /* Para el degradado de fondo */
+    overflow: hidden; /* Para que el degradado se vea bien */
+}
+
+.category-item.special-offer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Degradado naranja/rojo en el fondo */
+    background: linear-gradient(to bottom right, #ff7e00, #ff4c00);
+    opacity: 0.1; /* Transparencia para que el blanco de fondo se vea un poco */
+    z-index: 0; /* Asegura que esté debajo del contenido */
+}
+
+.category-item.special-offer img,
+.category-item.special-offer span {
+    position: relative; /* Asegura que el contenido esté sobre el degradado */
+    z-index: 1;
+}
+
+.category-item.special-offer span {
+    color: #ff5722; /* Color naranja fuerte para el texto */
+}
+
